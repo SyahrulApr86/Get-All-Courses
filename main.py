@@ -145,9 +145,7 @@ def find_missing_ids(total_ids, results):
     return [course_id for course_id in range(1, total_ids + 1) if course_id not in existing_ids]
 
 
-if __name__ == "__main__":
-    num_processes = 8
-    total_ids = 4096
+def main(num_processes=8, total_ids=4096):
     ids_per_process = total_ids // num_processes
 
     manager = multiprocessing.Manager()
@@ -186,3 +184,7 @@ if __name__ == "__main__":
         writer.writerows(sorted_results)
 
     print("Results have been exported to courses_results.csv.")
+
+
+if __name__ == "__main__":
+    main()
