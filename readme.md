@@ -1,5 +1,3 @@
-# README
-
 ## Course Scraper using Selenium and Multiprocessing
 
 This project is a Python-based web scraper designed to automate the process of retrieving information about courses from the SCELE website using Selenium, BeautifulSoup, and multiprocessing.
